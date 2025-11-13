@@ -1,23 +1,41 @@
-<h1>Html server</h1>
 
-<tt>a quite server that serve a static web-site : </tt> 
-<li>Html</li>
-<li>CSS</li>
-<hr />
-<h3>in this project : </h3>
-<tt> I did use just cors package : </tt>
-<li>http : </li> <tt> to create a nodejs server with the method <mark>createServer</mark></tt>
-``` js
-   const server = http.createServer((req, res)=> {
-     /// server code
-   });
+
+# 🌐 HTML Server
+
+A lightweight Node.js server for serving static HTML and CSS files.  
+Built using only the core `http` and `fs` modules — no frameworks, no dependencies.
+
+
+## 🚀 Features
+- Serves static HTML pages  
+- Handles CSS files  
+- Simple and minimal code (no frameworks)
+
+## 🛠️ Tech Stack
+- **Node.js**
+- **HTTP module** – to create the web server  
+- **FS module** – to stream static files
+
+## 📂 Project Structure
+``` text
+html-server/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── about.html
+│   ├── articles.html
+│   ├── index.html
+│   ├── me.html
+│   ├── thoughts.html
+│   └── Tajawal.ttf
+├── server.js
+├── package.json
+└── README.md
 ```
-<li>fs : </li> <tt> to read the static files, using the method <mark>createReadStream</mark></tt>
-``` js 
-  function readFile(file, res) {
-     return (
-         res.writeHead(200,{'Content-Type':'text/html'}),
-         fs.createReadStream(`/assets/${file}.html`).pipe(res)
-            )
-   }
+## ▶️ Run the server
+```bash
+node server.js
 ```
+
+Then open your browser at:
+👉 http://localhost:9319
