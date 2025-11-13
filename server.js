@@ -15,7 +15,7 @@
         readFile(req.url, res);
       }else if(req.url == '/css/styles.css'){
         res.writeHead(200,{'Content-Type':'text/css'});
-       fs.createReadStream(`/assets/css/styles.css`).pipe(res);
+       fs.createReadStream(`./assets/css/styles.css`).pipe(res);
       }else{
         res.writeHead(404);
         res.end('not found');
@@ -28,6 +28,6 @@ server.listen(9319, ()=>console.log('runing'));
 function readFile(file, res) {
      return (
          res.writeHead(200,{'Content-Type':'text/html'}),
-         fs.createReadStream(`/assets/${file}.html`).pipe(res)
+         fs.createReadStream(`./assets/${file}.html`).pipe(res)
             )
 }
