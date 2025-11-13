@@ -1,0 +1,17 @@
+{
+  "name": "html-server",
+  "version": "1.1.2",
+  "description": "a html server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "key1",
+    "key2",
+    "key3"
+  ],
+  "author": "irbade",
+  "license": "ISC"
+}
