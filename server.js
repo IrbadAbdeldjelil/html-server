@@ -23,7 +23,7 @@
     });
 
 
-server.listen(9319, ()=>console.log('runing on http://localhost:9319));
+server.listen(9319, ()=>console.log('runing on http://localhost:9319'));
 
 function readFile(file, res) {
      return (
